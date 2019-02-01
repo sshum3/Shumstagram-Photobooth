@@ -131,7 +131,8 @@ class ShumstagramApp(tk.Tk):
         oldPrintsLeft = self.var.get()
         self.var.set(oldPrintsLeft - 1)
         self.show_frame(page_name)
-        print('Printing')
+        print('Printing... The amount of paper left...')
+        print(oldPrintsLeft)
         os.system("lp -d CanonCP1200 temp/output.jpg")
         time.sleep(30)
         if oldPrintsLeft == 0:
